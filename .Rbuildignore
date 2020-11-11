@@ -1,0 +1,6 @@
+\.git
+^README\.md$
+\.gitignore
+Makefile
+^\.travis\.yml$
+^LICENSE\.txt$

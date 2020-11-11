@@ -1,0 +1,14 @@
+Revision history for the R/blasco package
+-----------------------------------------
+
+Version 0.1, 2019-12-20:
+
+  Function preview.table()
+
+Version 0.1, 2019-08-01:
+
+  Created functions percent(), outreg()
+
+Version 0.1, 2019-09-01:
+
+  Created function coefplot()
