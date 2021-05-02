@@ -2,15 +2,15 @@
 % Please edit documentation in R/utils.R
 \name{topcode}
 \alias{topcode}
-\title{Top code a variable}
+\title{Top-code variables}
 \usage{
 topcode(x, value)
 }
 \arguments{
-\item{x}{variable}
+\item{x}{Variable to be censored}
 
-\item{value}{threshold}
+\item{value}{Upper bound}
 }
 \description{
-Top code a variable
+Censor a variable above a certain upper bound
 }

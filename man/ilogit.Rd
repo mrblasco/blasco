@@ -7,7 +7,7 @@
 ilogit(x)
 }
 \arguments{
-\item{x}{real number}
+\item{x}{Real number}
 }
 \description{
 Inverse logistic function = exp(x) / (1 + exp(x))

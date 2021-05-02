@@ -2,9 +2,9 @@
 % Please edit documentation in R/utils.R
 \name{percent}
 \alias{percent}
-\title{Print proportions as percentages}
+\title{Convert proportions in percentage strings with the \verb{\%} sign.}
 \usage{
-percent(x, digits = 0, brackets = FALSE)
+percent(x, digits = 0)
 }
 \arguments{
 \item{x}{real number (proportion)}

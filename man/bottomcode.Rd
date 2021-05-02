@@ -2,15 +2,15 @@
 % Please edit documentation in R/utils.R
 \name{bottomcode}
 \alias{bottomcode}
-\title{Bottom code a variable}
+\title{Bottom-code variables}
 \usage{
 bottomcode(x, value)
 }
 \arguments{
 \item{x}{variable}
 
-\item{value}{threshold}
+\item{value}{Lower bound}
 }
 \description{
-Bottom code a variable
+Censor a variable below a certain lower bound
 }
