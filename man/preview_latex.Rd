@@ -4,7 +4,7 @@
 \alias{preview_latex}
 \title{Preview table in PDF using pandoc}
 \usage{
-preview_latex(x, filename = NULL, pandoc.opt = NULL)
+preview_latex(x, filename = NULL, pandoc.opt = NULL, header = NULL)
 }
 \arguments{
 \item{x}{vector of well-formatted latex table (e.g., from kable)}

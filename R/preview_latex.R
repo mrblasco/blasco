@@ -10,9 +10,12 @@
 #' @examples
 #' tab <- xtabs( ~ cyl + vs, data = mtcars) 
 #' preview_latex(knitr::kable(tab, format = "latex"))
-preview_latex <- function(x, filename = NULL, pandoc.opt = NULL) {
+preview_latex <- function(x, filename = NULL, pandoc.opt = NULL, header=NULL) {
   if (is.null(filename)) filename <- tempfile(fileext = ".md")
-  cat(x, file = filename)
+  cat(x, file = filename, fill = T)
+  if (!is.null(header)) {
+    cat(sprintf("\n\n---\nheader-includes: %s\n---\n\n", header), file = filename, fill = T, append = TRUE)
+  }
   if (is.null(pandoc.opt)) {
     pandoc.opt <- "-V documentclass:standalone -V geometry:margin=1in,landscape"
   }

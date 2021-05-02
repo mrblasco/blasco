@@ -1,3 +1,4 @@
+# From ARM 
 if (!isGeneric("display")) {
     setGeneric("display",
                function(object, ...)
