@@ -3,7 +3,7 @@
 #' Censor a variable below a certain lower bound
 #'
 #' @param x variable
-#' @param value threshold
+#' @param value Lower bound
 #' @export
 bottomcode <- function(x,value) ifelse(x<value,value,x)
 
@@ -12,7 +12,7 @@ bottomcode <- function(x,value) ifelse(x<value,value,x)
 #' Censor a variable above a certain upper bound
 #'
 #' @param x Variable to be censored
-#' @param Upper bound
+#' @param value Upper bound
 #' @export
 topcode <- function(x,value) ifelse(x>value,value,x)
 
@@ -49,6 +49,7 @@ percent <- function(x, digits=0) {
 #' @examples
 #' impute(c(NA, 12, NA, 1:10), 0)
 impute <- function(x, value) {
+  if (all(!is.na(x))) return(x)
   x_imputed <- ifelse(is.na(x), value, x)
   attr(x_imputed, "value") <- value
   attr(x_imputed, "missing") <- which(is.na(x))
