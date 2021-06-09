@@ -21,7 +21,8 @@ bwplot <- function(x, y=NULL, ..., type="p", hlines=NULL, hlines.col="lightgray"
 
     hidebwplot <- function(x, y, ..., type="p", hlines=NULL, hlines.col, hlines.lty, hlines.lwd,
                  vlines=NULL, vlines.col, vlines.lty, vlines.lwd,
-                 xat=pretty(x), yat=pretty(y), bgcolor="gray90", xaxt="n", yaxt="n",
+                 xat=pretty(x), xat.labels = xat, yat=pretty(y), yat.labels = yat
+                 , bgcolor="gray90", xaxt="n", yaxt="n",
                  col.lab=par("col.lab"),
                  xlim=NULL, ylim=NULL,
                  xlab, ylab, xname, yname,
@@ -76,20 +77,21 @@ bwplot <- function(x, y=NULL, ..., type="p", hlines=NULL, hlines.col="lightgray"
             # add gray rectangle
             u <- par("usr")
             rect(u[1], u[3], u[2], u[4], col=bgcolor, border=NA)
+            
 
             # x axis: if adding white lines, skip the tick marks and move the numbers closer
             if(!(!is.null(xat) && length(xat)==1 && is.na(xat))) { # if a single NA, skip x-axis
                 if(!is.null(xat)) {
                     if(!is.null(vlines))
-                        axis(side=1, at=xat, mgp=mgp.x, tick=FALSE, las=las, col = axis.col)
+                        axis(side=1, at=xat, labels = xat.labels, mgp=mgp.x, tick=FALSE, las=las, col = axis.col)
                     else
-                        axis(side=1, at=xat, las=las, col = axis.col)
+                        axis(side=1, at=xat, labels = xat.labels, las=las, col = axis.col)
                 }
                 else {
                     if(!is.null(vlines))
-                        axis(side=1, mgp=mgp.x, tick=FALSE, las=las, col = axis.col)
+                        axis(side=1, labels = xat.labels, mgp=mgp.x, tick=FALSE, las=las, col = axis.col)
                     else
-                        axis(side=1, las=las, col = axis.col)
+                        axis(side=1, labels = xat.labels, las=las, col = axis.col)
                 }
             }
 
@@ -97,15 +99,15 @@ bwplot <- function(x, y=NULL, ..., type="p", hlines=NULL, hlines.col="lightgray"
             if(!(!is.null(yat) && length(yat)==1 && is.na(yat))) { # if a single NA, skip y-axis
                 if(!is.null(yat)) {
                     if(!is.null(hlines))
-                        axis(side=2, at=yat, mgp=mgp.y, tick=FALSE, las=las, col = axis.col)
+                        axis(side=2, at=yat, labels = yat.labels, mgp=mgp.y, tick=FALSE, las=las, col = axis.col)
                     else
-                        axis(side=2, at=yat, las=las, col = axis.col)
+                        axis(side=2, at=yat, labels = yat.labels, las=las, col = axis.col)
                 }
                 else {
                     if(!is.null(hlines))
-                        axis(side=2, mgp=mgp.y, tick=FALSE, las=las, col = axis.col)
+                        axis(side=2, labels = yat.labels, mgp=mgp.y, tick=FALSE, las=las, col = axis.col)
                     else
-                        axis(side=2, las=las, col = axis.col)
+                        axis(side=2, labels = yat.labels, las=las, col = axis.col)
                 }
             }
 
