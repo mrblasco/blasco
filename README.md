@@ -1,6 +1,6 @@
 ## R/blasco 
 
-author: [Andrea Blasco](https://ablasco.org)
+author: [Andrea Blasco](http://www.ablasco.org)
 
 ---
 
