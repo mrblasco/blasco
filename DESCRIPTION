@@ -7,7 +7,7 @@ Description: Miscellaneous R functions, including functions related to
     inverse logit function, imputation, and general utilities.
 Author: Andrea Blasco <ablasco@hbs.edu>
 Maintainer: Andrea Blasco <ablasco@hbs.edu>
-License: GPL-3
+License: MIT + file LICENSE
 URL: 
 BugReports: 
 Encoding: UTF-8
