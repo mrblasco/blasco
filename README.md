@@ -12,7 +12,7 @@ author: [Andrea Blasco](http://www.ablasco.org)
 
 ```
 library(devtools)
-install_github("mrblasco/argparseR")
+install_github("mrblasco/blasco")
 ```
 
 
