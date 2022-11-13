@@ -1,4 +1,4 @@
-## R/blasco 
+# R/blasco 
 
 author: [Andrea Blasco](http://www.ablasco.org)
 
@@ -8,7 +8,15 @@ author: [Andrea Blasco](http://www.ablasco.org)
 
 ---
 
-### License
+# Installation
+
+```
+library(devtools)
+install_github("mrblasco/argparseR")
+```
+
+
+# License
 
 This package is free software; you can redistribute it and/or modify it
 under the terms of the GNU General Public License, version 3, as
@@ -23,6 +31,6 @@ A copy of the GNU General Public License, version 3, is available at
 <https://www.r-project.org/Licenses/GPL-3>
 
 
-## References
+# References
 
 R/blasco was inspired by the [R/broman](https://github.com/kbroman/broman) package.
