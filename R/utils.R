@@ -28,14 +28,13 @@ ilogit <- function(x) exp(x) / (1 + exp(x))
 #' Transforms proportions in strings with percent sign (with or without brackets). 
 #'
 #' @param x real number (proportion)
+#' @param format to pass to the `sprintf` function
 #' @export
 #'
 #' @examples
-#' p <- 0.15
 #' percent(0.15)
-percent <- function(x, digits=0) { 
-  if (x <0 | x > 1) stop("x must be between 0 and 1")
-  paste0(round(x*100, digits), "%")
+percent <- function(x, format="%0.1f") {
+	sprintf(paste0(format,'%s'), 100 * x, "%")
 }
 
 
@@ -57,4 +56,13 @@ impute <- function(x, value) {
 }
 
 
-
+#' Pivot data from wide to long format
+#' @export
+pivot_longer <- function(data, varnames) {
+	stopifnot(is.data.frame(data))
+	out <- rep()
+	for (v in varnames) out <- append(out, d[[v]])
+	data.frame(row_id = rep(1:nrow(d), times=length(varnames))
+		, varname = rep(varnames, each=nrow(d))
+		, value = out)
+}

@@ -4,15 +4,16 @@
 \alias{percent}
 \title{Convert proportions in percentage strings with the \verb{\%} sign.}
 \usage{
-percent(x, digits = 0)
+percent(x, format = "\%0.1f")
 }
 \arguments{
 \item{x}{real number (proportion)}
+
+\item{format}{to pass to the \code{sprintf} function}
 }
 \description{
 Transforms proportions in strings with percent sign (with or without brackets).
 }
 \examples{
-p <- 0.15
 percent(0.15)
 }
